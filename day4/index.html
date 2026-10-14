@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CareRoute: live hospital bed availability for ambulance crews, hospitals and patient families in Jaipur.">
+  <title>CareRoute – Live hospital bed availability for emergency referrals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main-content">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-bar">
+      <a class="brand" href="#top" aria-label="CareRoute, back to top">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="currentColor"/>
+          <path d="M16 7v18M7 16h18" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="25" cy="7" r="3" fill="#e5432d"/>
+        </svg>
+        <span>CareRoute</span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav id="nav" class="nav" aria-label="Primary">
+        <a href="#problem">The problem</a>
+        <a href="#how">How it works</a>
+        <a href="#demo">Live demo</a>
+        <a href="#impact">Impact</a>
+        <a href="#roles">For each user</a>
+        <a class="btn btn-sm" href="#demo">Try the demo</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Know which hospital has a bed before the ambulance leaves.</h1>
+          <p class="lead">CareRoute shows ambulance crews live bed counts across Jaipur's hospitals, lets them pre-book a bed, and gives the family a token to check. No phone calls, no second referral.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#demo">Try the live demo</a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
+          </div>
+          <p class="fine">Problem statement: real-time bed availability coordination for emergency patient referrals.</p>
+        </div>
+        
+        <aside class="board" aria-label="Live bed board">
+          <div class="board-head">
+            <h2>Emergency beds, nearest first<span>from Jaipur Junction</span></h2>
+            <span class="live"><i aria-hidden="true"></i>Live</span>
+          </div>
+          <ol id="board" class="board-rows"></ol>
+          <p class="board-foot">This board reads the same data as the demo below. Pre-book a bed and watch it change.</p>
+        </aside>
+      </div>
+    </section>
+    
+    <!-- ============ PROBLEM ============ -->
+    <section class="section" id="problem" aria-labelledby="problem-title">
+      <div class="container split">
+        <div class="split-head" data-reveal>
+          <h2 id="problem-title">Ambulances drive blind.</h2>
+          <p class="lead">Bed counts sit inside hospital records. Crews can't see them, so critical patients are driven to a full hospital and referred again. In an emergency, every minute counts.</p>
+        </div>
+        <ul class="ruled">
+          <li data-reveal style="--d:0ms"><h3>No live visibility</h3><p>Bed counts sit in hospital records. Drivers cannot see them.</p></li>
+          <li data-reveal style="--d:90ms"><h3>Phone-call guesswork</h3><p>Crews call or drive from hospital to hospital, losing minutes at each one.</p></li>
+          <li data-reveal style="--d:180ms"><h3>Repeated re-referrals</h3><p>Patients reach a full hospital and are sent on again.</p></li>
+          <li data-reveal style="--d:270ms"><h3>Uneven load</h3><p>Some hospitals overflow while nearby ones are under-used.</p></li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section section-tint" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <div class="split-head narrow" data-reveal>
+          <h2 id="how-title">From bed update to admission in four steps</h2>
+          <p class="lead">Scroll to follow the ambulance along the route.</p>
+        </div>
+        
+        <div class="route" id="route">
+          <div class="route-line" aria-hidden="true"><span class="route-fill"></span><span class="route-dot"></span></div>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-node" aria-hidden="true">1</span>
+              <div>
+                <h3>Staff update bed counts</h3>
+                <p>Hospital staff change emergency, ICU, ventilator and oxygen bed counts in one tap. Every update carries a timestamp.</p>
+                <span class="tag tag-green">Hospital portal</span>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-node" aria-hidden="true">2</span>
+              <div>
+                <h3>The cloud syncs instantly</h3>
+                <p>A central server stores the live counts and flags any hospital that has not updated for 30 minutes.</p>
+                <span class="tag">Server and database</span>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-node" aria-hidden="true">3</span>
+              <div>
+                <h3>The driver sees the nearest open hospital</h3>
+                <p>The app ranks hospitals by distance and ETA, hides nothing, and marks full ones clearly. One tap starts navigation.</p>
+                <span class="tag tag-red">Driver app</span>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-node" aria-hidden="true">4</span>
+              <div>
+                <h3>The driver pre-books and a token is issued</h3>
+                <p>A bed is held for 30 minutes. The family checks the token, the hospital confirms it, and the patient is admitted on arrival.</p>
+                <span class="tag tag-blue">Patient dashboard</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ============ LIVE DEMO ============ -->
+    <section class="section" id="demo" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="split-head narrow" data-reveal>
+          <h2 id="demo-title">Try the full loop yourself</h2>
+          <p class="lead">Pre-book a bed as the driver, confirm it as the hospital, then check the token as the patient's family. All hospital numbers are simulated.</p>
+        </div>
+        
+        <div class="app" id="app" data-reveal>
+          <div class="app-tabs" role="tablist" aria-label="Choose a role">
+            <button class="app-tab" role="tab" type="button" data-a="tab" data-v="hospital">Hospital staff</button>
+            <button class="app-tab" role="tab" type="button" data-a="tab" data-v="driver">Ambulance driver</button>
+            <button class="app-tab" role="tab" type="button" data-a="tab" data-v="patient">Patient family</button>
+          </div>
+          <div id="main" class="app-body" role="tabpanel" aria-live="polite"></div>
+          <div class="app-foot">
+            <p>Tip: open this page in two browser tabs and the changes sync between them.</p>
+            <div class="demo-actions">
+              <button class="btn btn-ghost btn-sm" type="button" data-a="ff">Fast-forward 20 min</button>
+              <button class="btn btn-danger btn-sm" type="button" data-a="reset">Reset demo data</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ============ IMPACT ============ -->
+    <section class="section section-tint" id="impact" aria-labelledby="impact-title">
+      <div class="container">
+        <div class="split-head narrow" data-reveal>
+          <h2 id="impact-title">Eight minutes to confirm a bed instead of eighteen</h2>
+          <p class="lead">Searching blind becomes a one-look decision, so more patients reach the right bed in time.</p>
+        </div>
+        
+        <div class="compare" data-reveal>
+          <div class="bar-row">
+            <span>Before<small>Phone calls and guesswork</small></span>
+            <div class="meter" aria-hidden="true"><span class="bar-fill before" style="--w:100%"></span></div>
+            <b>~18 min</b>
+          </div>
+          <div class="bar-row">
+            <span>With CareRoute<small>Live lookup and pre-booking</small></span>
+            <div class="meter" aria-hidden="true"><span class="bar-fill after" style="--w:44%"></span></div>
+            <b>~8 min</b>
+          </div>
+        </div>
+        
+        <dl class="stats">
+          <div data-reveal style="--d:0ms"><dt>less time to confirm a bed</dt><dd><span data-count="55">55</span>%</dd></div>
+          <div data-reveal style="--d:120ms"><dt>hospitals contacted per patient</dt><dd><span data-count="1" data-from="3">1</span> <span class="of">instead of 3</span></dd></div>
+          <div data-reveal style="--d:240ms"><dt>phone calls needed to find a bed</dt><dd><span data-count="0" data-from="3">0</span></dd></div>
+        </dl>
+        <p class="fine">Illustrative pilot estimate: 3 hospitals at about 6 minutes per call or detour, compared with about 8 minutes for a live lookup. To be validated with real data.</p>
+      </div>
+    </section>
+    
+    <!-- ============ ROLES ============ -->
+    <section class="section" id="roles" aria-labelledby="roles-title">
+      <div class="container">
+        <div class="split-head narrow" data-reveal>
+          <h2 id="roles-title">What each user gets, and what comes next</h2>
+          <p class="lead">Solid dots work in the demo today. Dashed dots are planned improvements.</p>
+        </div>
+        
+        <div class="roles">
+          <article class="role role-patient" data-reveal style="--d:0ms">
+            <h3>Patient family</h3>
+            <h4>Works today</h4>
+            <ul class="now">
+              <li>Check a token and see its status at a glance</li>
+              <li>See when the hospital last confirmed the bed</li>
+              <li>Ask the hospital to reconfirm</li>
+            </ul>
+            <h4>Planned next</h4>
+            <ul class="next">
+              <li>Token and alerts by SMS or WhatsApp, in Hindi and English</li>
+              <li>Live ambulance location</li>
+              <li>Minimal patient data, in line with the DPDP Act, 2023</li>
+            </ul>
+          </article>
+          
+          <article class="role role-driver" data-reveal style="--d:120ms">
+            <h3>Ambulance driver</h3>
+            <h4>Works today</h4>
+            <ul class="now">
+              <li>Hospitals ranked by distance and ETA</li>
+              <li>One-tap navigation and pre-booking</li>
+              <li>Warnings when a hospital's data is stale</li>
+            </ul>
+            <h4>Planned next</h4>
+            <ul class="next">
+              <li>Road ETA with live traffic</li>
+              <li>Match by specialty: trauma, cardiac, stroke, neonatal</li>
+              <li>Offline cache, voice prompts and auto re-routing on decline</li>
+            </ul>
+          </article>
+
+          <article class="role role-hospital" data-reveal style="--d:240ms">
+            <h3>Hospital staff</h3>
+            <h4>Works today</h4>
+            <ul class="now">
+              <li>One-tap bed counters with an updated-at time</li>
+              <li>Incoming tokens to confirm, decline or admit</li>
+              <li>Expired tokens release the bed automatically</li>
+            </ul>
+            <h4>Planned next</h4>
+            <ul class="next">
+              <li>Counts pulled from the hospital's own system</li>
+              <li>Staff logins with an audit log</li>
+              <li>Pre-arrival summary and peak-hour analytics</li>
+            </ul>
+          </article>
+        </div>
+        
+        <h3 class="path-title" data-reveal>Build path</h3>
+        <ol class="path" data-reveal>
+          <li class="done"><b>Browser prototype</b><span>HTML, CSS and JavaScript. This page.</span></li>
+          <li><b>Java Spring Boot API</b><span>With a MySQL or PostgreSQL database.</span></li>
+          <li><b>WebSockets and SMS</b><span>Instant bed updates and tokens by SMS.</span></li>
+          <li><b>Pilot with one hospital cluster</b><span>Validate the eight-minute estimate.</span></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container foot-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="CareRoute, back to top">
+          <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M16 7v18M7 16h18" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="25" cy="7" r="3" fill="#e5432d"/></svg>
+          <span>CareRoute</span>
+        </a>
+        <p class="fine">A prototype for real-time bed availability coordination. Bed counts are simulated and hospital positions are approximate.</p>
+      </div>
+      <p class="emergency">In a real emergency, call <b>108</b> or <b>112</b>.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CareRoute – Live Bed Coordination (Jaipur prototype)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>🚑 CareRoute <span class="mu" style="font-weight:400">· live bed coordination, Jaipur</span></h1>
+  <div class="sub">Working prototype of the CareRoute model: hospital staff update beds → ambulance driver sees the nearest open hospital → pre-books a bed → patient family checks the token.</div>
+  <div class="tabs">
+    <button class="tab" data-a="tab" data-v="hospital">🏥 Hospital</button>
+    <button class="tab" data-a="tab" data-v="driver">🚑 Driver</button>
+    <button class="tab" data-a="tab" data-v="patient">👪 Patient</button>
+  </div>
+  <div id="main"></div>
+  <div class="card">
+    <h2>Demo controls</h2>
+    <div class="mu">Try the full loop: Driver pre-books → Hospital confirms → Patient checks the token. Open two browser tabs to see them sync.</div>
+    <div class="demo">
+      <button class="btn o" data-a="ff">⏩ Fast-forward 20 min</button>
+      <button class="btn d" data-a="reset">Reset demo data</button>
+    </div>
+  </div>
+  <div class="note">Prototype only. Bed counts are simulated demo data and hospital positions are approximate; verify before any real use. In a real emergency call 108 / 112.</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html> -->
+</html>
